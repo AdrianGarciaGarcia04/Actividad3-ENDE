@@ -13,12 +13,21 @@ public class TemperaturaMedia {
 		caracter = pedirCaracter("Introduce un caracter para pintar el diagrama:");
 		pintarDiagrama(temperaturas, caracter);
 	}
+	/**
+	 * Pide la temperatura a los usuarios
+	 * @param vector Es el vector con las temperaturas
+	 */
 	public static void pedirTemperaturasMedias(int[] vector) {
 		for(int i = 0;i<vector.length;i++) {
 			System.out.println("Introduce la temperatura (ºC) media de " + mesesEnteros[i] + ":");
 			vector[i] = Integer.parseInt(teclado.nextLine());
 		}
 	}
+	/**
+	 * Pinta el diagrama con las temperaturas
+	 * @param vector Es el vector con las temperaturas
+	 * @param caracter
+	 */
 	public static void pintarDiagrama(int vector[], String caracter) {
 		for(int i = 0;i<vector.length;i++) {
 			System.out.print(meses[i] +": ");
